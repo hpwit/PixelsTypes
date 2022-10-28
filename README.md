@@ -574,7 +574,7 @@ void loop() {
   }
 }
 ```
- ![Tux, the Linux mascot](/images/IMG_2744.jpg)
+ ![Tux, the Linux mascot](/images/IMG_2745.jpg)
 Couple of remarks:
 
  1. Your mapping function has to be declared as such: `int map(int   
