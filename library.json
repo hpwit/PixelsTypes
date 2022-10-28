@@ -1,0 +1,15 @@
+{
+  "name": "PixelTypes",
+  "keywords": "NeoPixel, WS2811, WS2812, WS2813, SK6812, DotStar, RGB, RGBW",
+  "description": "Library to mmanipulaite led strip data.",
+  "homepage": "ttps://github.com/hpwit/PixelTypes",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/hpwit/PixelTypes"
+  },
+  "version": "1.0.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
+
