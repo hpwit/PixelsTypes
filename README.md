@@ -115,12 +115,12 @@ If you write `leds[21]=CRGB(89,45,21)` you might be in trouble for writing out o
 
 This is how to declare a Pixels object
 
-    Pixels leds=Pixel(20):
+    Pixels leds=Pixels(20):
 ⓘ We will see alter that there are more ways of declaring Pixels but for the moment let's start with that
 
 With `leds` as `Pixels` you can still do the following
 ```C
-	Pixels leds=Pixel(20):
+    Pixels leds=Pixels(20):
     leds[0]=CRGB(255,0,0);
     leds[1]=CRGB(0,0,255);
     leds[2]=CRGB(0,255,0);
