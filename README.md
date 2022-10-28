@@ -13,7 +13,7 @@ Plus on different forums I have noticed  the following :
 CRGB leds[NUM_LEDS];
 ....
 
-leds[NUM_LEDS]=CRGB(255,0,0; <= this is not good :(
+leds[NUM_LEDS]=CRGB(255,0,0); <= this is not good :(
 ```
 
 This is due to C++ not being memory safe (don't get me wrong I love c++)
@@ -141,7 +141,7 @@ For instance if you have  a long strip of 250 leds and want to run an animation 
 #### createSubset(int start, int length)
 
 ```C
-	Pixels leds=Pixel(200):
+	Pixels leds=Pixels(200):
 	Pixels subset=leds.createSubset(45,105);
 
 	subset[0]=Pixel(255,0,0);
@@ -178,7 +178,7 @@ As a subset is a Pixels class you an take the subset of a subset:
 #### overlapping subsets
 Of course you can have overlapping subsets
 ```C
-	Pixels leds=Pixel(256);
+	Pixels leds=Pixels(256);
 	Pixels subset1=leds.createSubset(0,100);
 	Pixels subset2=leds.createSubset(50,16);
  ```
@@ -192,7 +192,7 @@ You want to run an animation on an odd strip you need to 'mirror' the leds by co
 Running  this code :
 
 ```C
-	Pixels leds=Pixel(256);
+	Pixels leds=Pixels(256);
 	Pixels subset1=leds.createSubset(0,16);
 	Pixels subset2=leds.createSubset(16,16);
 	
@@ -223,7 +223,7 @@ Which is more aligned with what you want. because now you have Indeed  `subset2[
 Another use case is to have one long led strip and you want an animation on both sides mirroring.
 
 ```C
-	Pixels leds=Pixel(256);
+	Pixels leds=Pixels(256);
 	Pixels subset=leds.createSubset(0,128);
 	Pixels reverse_subset=leds.createSubset(128,128,leddirection::BACKWARD);
 	int off=0;
@@ -268,7 +268,7 @@ In copy the default direction is `FORWARD` hence `leds.copy(Pixels leds_ori)=led
 
 Let's take a look at our previous code with `copy` this time
 ```C
-	Pixels leds=Pixel(256);
+	Pixels leds=Pixels(256);
 	Pixels subset=leds.createSubset(0,128);
 	Pixels reverse_subset=leds.createSubset(128,128,leddirection::BACKWARD);
 	int off=0;
