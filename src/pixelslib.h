@@ -378,10 +378,11 @@ public:
         {
 
         case (leddirection::FORWARD):
-            if (i < 0)
+            if (i < 0 or i >= _size)
+            {
+                printf("Error : Out of bound exception: index %d is not between 0 and %d\n",i,_size-1);
                 return offPixel;
-            if (i >= _size)
-                return offPixel;
+            }
 
             return *(ledpointer + i % _size);
             break;

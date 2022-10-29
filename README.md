@@ -127,8 +127,10 @@ With `leds` as `Pixels` you can still do the following
     leds[3]=Pixel(255,255,12);
 ```
 
-but `leds[56]=Pixel(45,47,48)` will not get you into trouble anymore :)
-Indeed the Pixels object is not a simple array but a class. This allow to better control the behavior of the 'strip'
+but `leds[56]=Pixel(45,47,48)` will not get you into trouble anymore :) 
+ⓘ But you will see in your serial output this message in that case : `Error : Out of bound exception: index X is not between 0 and Y`
+
+Indeed the Pixels object is not a simple array but a class. This allows to better control the behavior of the 'strip'
 In that case the out of bound pixels doesn't get written 'somewhere' in memory hence avoiding crashing.
 
 If the Pixels object would only do that, it will be limited. Let's dive into the functionalities
